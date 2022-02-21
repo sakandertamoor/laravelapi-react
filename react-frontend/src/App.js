@@ -7,8 +7,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' element={Student}/>
-        <Route  path='/add-student' element={Addstudent}/>
+        <Route exact path='/' component={Student}/>
+        <Route path='/add-student' component={Addstudent}/>
       </Switch>
     </Router>
   );
