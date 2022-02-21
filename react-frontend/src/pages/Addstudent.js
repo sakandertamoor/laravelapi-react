@@ -17,7 +17,7 @@ class Addstudent extends Component{
     saveStudent = async (e) =>{
         e.preventDefault();
         try {
-            const studentDataResult = await axios.post('/api/add-student', this.state);
+            const studentDataResult = await axios.post('http://127.0.0.1:8000/api/add-student', this.state);
 
         } catch (e) {
             alert('Here');
