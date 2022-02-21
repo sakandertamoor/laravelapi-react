@@ -14,8 +14,15 @@ class Addstudent extends Component{
             [e.target.name] : e.target.value
         });
     }
-    saveStudent = (e) =>{
+    saveStudent = async (e) =>{
         e.preventDefault();
+        try {
+            const studentDataResult = await axios.post('/api/add-student', this.state);
+
+        } catch (e) {
+            alert('Here');
+        }
+        
     }
     render(){
         return(
@@ -30,19 +37,19 @@ class Addstudent extends Component{
                             <div className='card-body'>
                                 <form onSubmit={this.saveStudent}>
                                     <div className='form-group mb-3'>
-                                        <label for='Name'>Name:</label>
+                                        <label htmlFor='Name'>Name:</label>
                                         <input type='text' name='name' onChange={this.handleInput} value={this.state.name} className='form-control' />
                                     </div>
                                     <div className='form-group mb-3'>
-                                        <label for='Course'>Course:</label>
+                                        <label htmlFor='Course'>Course:</label>
                                         <input type='text' name='course' onChange={this.handleInput} value={this.state.course} className='form-control' />
                                     </div>
                                     <div className='form-group mb-3'>
-                                        <label for='Email'>Email:</label>
+                                        <label htmlFor='Email'>Email:</label>
                                         <input type='text' name='email' onChange={this.handleInput} value={this.state.email} className='form-control' />
                                     </div>
                                     <div className='form-group mb-3'>
-                                        <label for='Phone'>Phone:</label>
+                                        <label htmlFor='Phone'>Phone:</label>
                                         <input type='text' name='phone' onChange={this.handleInput} value={this.state.phone} className='form-control' />
                                     </div>
                                     <div className='form-group mb-3 float-end'>
