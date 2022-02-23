@@ -24,4 +24,14 @@ class StudentController extends Controller
             ]);
         }
     }
+    public function view(){
+        $student = Student::get();
+        if($student){
+            return response()->json([
+                'status' => 200,
+                'message' => $student 
+            ]);
+        }
+    }
+
 }
