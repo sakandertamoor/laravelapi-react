@@ -18,9 +18,13 @@ class Addstudent extends Component{
         e.preventDefault();
         try {
             const studentDataResult = await axios.post('http://127.0.0.1:8000/api/add-student', this.state);
+            if(studentDataResult.data.status === 200){
+                this.setState({name:'',course:'',email:'',phone:''})
+                alert(studentDataResult.data.message);
+            }
 
         } catch (e) {
-            alert('Here');
+            alert(e);
         }
         
     }
