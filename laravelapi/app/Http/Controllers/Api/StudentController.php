@@ -20,6 +20,7 @@ class StudentController extends Controller
         if($student){
             return response()->json([
                 'status' => 200,
+                'result' => '',
                 'message' => 'Added Successfully'
             ]);
         }
@@ -29,7 +30,8 @@ class StudentController extends Controller
         if($student){
             return response()->json([
                 'status' => 200,
-                'message' => $student 
+                'result' => $student,
+                'message' => 'Fetch Data Successfully'
             ]);
         }
     }
