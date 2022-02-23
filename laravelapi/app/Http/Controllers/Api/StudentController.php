@@ -25,13 +25,23 @@ class StudentController extends Controller
             ]);
         }
     }
-    public function view(){
+    public function index(){
         $student = Student::get();
         if($student){
             return response()->json([
                 'status' => 200,
                 'result' => $student,
                 'message' => 'Fetch Data Successfully'
+            ]);
+        }
+    }
+    public function edit(Request $request){
+        $student = Student::findOrFail($request->id);
+        if($student){
+            return response()->json([
+                'status' => 200,
+                'result' => $student,
+                'message' => 'Search Student Successfully'
             ]);
         }
     }

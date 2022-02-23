@@ -9,6 +9,7 @@ function App() {
       <Switch>
         <Route exact path='/' component={Student}/>
         <Route path='/add-student' component={Addstudent}/>
+        <Route path='/edit-student/{:id}' component={Editstudent}/>
       </Switch>
     </Router>
   );
