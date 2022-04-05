@@ -22,11 +22,9 @@ class Addstudent extends Component{
                 this.setState({name:'',course:'',email:'',phone:''})
                 alert(studentDataResult.data.message);
             }
-
         } catch (e) {
             alert(e);
         }
-        
     }
     render(){
         return(

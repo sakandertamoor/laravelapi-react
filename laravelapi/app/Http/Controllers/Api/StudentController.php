@@ -45,5 +45,15 @@ class StudentController extends Controller
             ]);
         }
     }
+    public function update(Request $request){
+        $student = ""; //Student::update($request->id);
+        if($student){
+            return response()->json([
+                'status' => 200,
+                'result' => $student,
+                'message' => 'Student Data Updated Successfully'
+            ]);
+        }
+    }
 
 }

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Facade\FlareClient\Http\Response;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 

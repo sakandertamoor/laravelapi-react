@@ -22,6 +22,7 @@ Route::controller(StudentController::class)->group( function(){
     Route::post('/add-student','store');
     Route::get('/get-student','index');
     Route::get('/edit-student/{id}','edit');
+    Route::put('/update-student/{id}','update');
     
 });
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
