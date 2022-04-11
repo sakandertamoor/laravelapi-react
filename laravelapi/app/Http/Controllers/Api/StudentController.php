@@ -45,13 +45,17 @@ class StudentController extends Controller
             ]);
         }
     }
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $student = ""; //Student::update($request->id);
         if($student){
             return response()->json([
                 'status' => 200,
                 'result' => $student,
+<<<<<<< Updated upstream
                 'message' => 'Student Data Updated Successfully '
+=======
+                'message' => 'Student Data Update Successfully' 
+>>>>>>> Stashed changes
             ]);
         }
     }
